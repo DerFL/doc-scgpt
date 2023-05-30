@@ -9,7 +9,8 @@ import torch.distributed as dist
 import torch.nn.functional as F
 from torch.nn import TransformerEncoder, TransformerEncoderLayer
 from torch.distributions import Bernoulli
-from flash_attn.flash_attention import FlashMHA
+# from flash_attn.flash_attention import FlashMHA
+from .flash_attn_doc import DocFlashMHA
 from tqdm import trange
 
 from .dsbn import DomainSpecificBatchNorm1d
@@ -618,7 +619,14 @@ class FlashTransformerEncoderLayer(nn.Module):
     ) -> None:
         factory_kwargs = {"device": device, "dtype": dtype}
         super().__init__()
-        self.self_attn = FlashMHA(
+        # self.self_attn = FlashMHA(
+        #     embed_dim=d_model,
+        #     num_heads=nhead,
+        #     batch_first=batch_first,
+        #     attention_dropout=dropout,
+        #     **factory_kwargs,
+        # )
+        self.self_attn = DocFlashMHA(
             embed_dim=d_model,
             num_heads=nhead,
             batch_first=batch_first,

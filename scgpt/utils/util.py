@@ -10,7 +10,7 @@ import numpy as np
 import torch
 import pandas as pd
 from anndata import AnnData
-import scib
+# import scib
 from matplotlib import pyplot as plt
 from matplotlib import axes
 from IPython import get_ipython
@@ -270,26 +270,27 @@ def eval_scib_metrics(
     label_key: str = "celltype",
     notes: Optional[str] = None,
 ) -> Dict:
-    results = scib.metrics.metrics(
-        adata,
-        adata_int=adata,
-        batch_key=batch_key,
-        label_key=label_key,
-        embed="X_scGPT",
-        isolated_labels_asw_=False,
-        silhouette_=True,
-        hvg_score_=False,
-        graph_conn_=True,
-        pcr_=True,
-        isolated_labels_f1_=False,
-        trajectory_=False,
-        nmi_=True,  # use the clustering, bias to the best matching
-        ari_=True,  # use the clustering, bias to the best matching
-        cell_cycle_=False,
-        kBET_=False,  # kBET return nan sometimes, need to examine
-        ilisi_=False,
-        clisi_=False,
-    )
+    results = "doc_placeholder"
+    # results = scib.metrics.metrics(
+    #     adata,
+    #     adata_int=adata,
+    #     batch_key=batch_key,
+    #     label_key=label_key,
+    #     embed="X_scGPT",
+    #     isolated_labels_asw_=False,
+    #     silhouette_=True,
+    #     hvg_score_=False,
+    #     graph_conn_=True,
+    #     pcr_=True,
+    #     isolated_labels_f1_=False,
+    #     trajectory_=False,
+    #     nmi_=True,  # use the clustering, bias to the best matching
+    #     ari_=True,  # use the clustering, bias to the best matching
+    #     cell_cycle_=False,
+    #     kBET_=False,  # kBET return nan sometimes, need to examine
+    #     ilisi_=False,
+    #     clisi_=False,
+    # )
 
     if notes is not None:
         logger.info(f"{notes}")

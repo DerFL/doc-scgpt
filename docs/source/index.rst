@@ -1,6 +1,5 @@
 Welcome to scGPT's documentation!
 ===================================
-
 Generative pre-trained models have achieved remarkable success 
 in various domains such as natural language processing and computer vision. 
 Specifically, the combination of large-scale diverse datasets and pre-trained 
