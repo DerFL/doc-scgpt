@@ -1,6 +1,6 @@
 # scGPT
 
-This is the official codebase for **scGPT: Towards Building a Foundation Model for Single-Cell Multi-omics Using Generative AI**.
+This repository is forked from the official codebase for **scGPT: Towards Building a Foundation Model for Single-Cell Multi-omics Using Generative AI**.
 
 ## Installation
 
