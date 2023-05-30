@@ -30,5 +30,4 @@ Contents
 
    usage
    tutorials
-   
    api

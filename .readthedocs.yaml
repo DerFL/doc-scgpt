@@ -5,13 +5,13 @@ build:
   tools:
     python: "3.9"
 
-python:
-  install:
-    - requirements: docs/torch_requirement.txt
-    - method: pip
-      path: .
-    - method: pip
-      path: scgpt
+sphinx:
+  configuration: docs/conf.py
+
+# python:
+#   install:
+#   - method: pip
+#     path: .
       
 sphinx:
   fail_on_warning: true
