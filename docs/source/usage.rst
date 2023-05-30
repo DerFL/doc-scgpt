@@ -14,12 +14,13 @@ scGPT is available on PyPI. To install scGPT, run the following command:
 
 
 [Optional] We recommend using wandb for logging and visualization.
+
 .. code-block:: console
 
    (.venv) $ pip install wandb
 
 For developing, we are using the Poetry package manager. To install Poetry, follow the instructions here.
-[Optional] We recommend using wandb for logging and visualization.
+
 .. code-block:: console
 
    (.venv) $ git clone https://github.com/bowang-lab/scGPT
